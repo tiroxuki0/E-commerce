@@ -33,8 +33,8 @@ export enum MEDIA_TYPE {
 }
 
 export const DEFAULT_LANGUAGE = "en"
-export const DEFAULT_PHONE_NUMBER = "077 292 0992"
-export const DEFAULT_EMAIL = "zilicoffee.vn@gmail.com"
+export const DEFAULT_PHONE_NUMBER = "077 5663 385"
+export const DEFAULT_EMAIL = "example@gmail.com"
 
 export const BASE_CONSTANTS = {
   BASE_URL: process.env.BASE_URL || 'https://api.zilicoffee.vn/api/v1',

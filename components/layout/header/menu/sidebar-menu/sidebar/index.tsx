@@ -13,7 +13,7 @@ const SideBar = () => {
   return (
     <div className="md:hidden">
       <div onClick={openNavBar}>
-        <img src="/images/icons/bars-icon.svg" alt="/images/icons/bars-icon.svg" className="cursor-pointer w-[39px] min-w-[39px] h-[39px]" />
+        <img src="/images/icons/bars-icon.svg" alt="/images/icons/bars-icon.svg" className="cursor-pointer w-[25px] min-w-[25px] h-[25px]" />
       </div>
       <Transition
         nodeRef={nodeRef}

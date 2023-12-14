@@ -5,7 +5,7 @@ export default function Document() {
       <Head>
         <meta
           name="description"
-          content="Zili Coffee - Cà phê nguyên bản vị cao nguyên Di Linh"
+          content="Mua bán thẻ điện thoại, thẻ game, nạp tiền topup"
         />
         <link rel="shortcut icon" href="/images/icons/ic_logo.png" />
       </Head>

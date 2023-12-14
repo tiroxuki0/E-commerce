@@ -33,16 +33,6 @@ const FooterColumns = () => {
             <a href={`tel:${DEFAULT_PHONE_NUMBER}`} className="text-[14px] text-justify text-primary py-2 hover:underline">
               <span className="font-bold">{t.phoneNumber}:</span> {DEFAULT_PHONE_NUMBER}
             </a>
-            {
-                ADDRESS_LIST.length > 0 &&
-                ADDRESS_LIST.map((address, index) => {
-                    return (
-                        <a className="text-[14px] text-justify text-primary py-2" key={index}>
-                            <span className="font-bold">{t.address} {index + 1}:</span> {locale === DEFAULT_LANGUAGE ? address.titleEn : address.titleVi}
-                        </a>
-                    )
-                })
-            }
         </div>
       </div>
     </div>
