@@ -1,0 +1,43 @@
+@import "../../../../styles/variables";
+
+.Modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999991;
+  @include display-flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modalContainer {
+  border-radius: 4px;
+  @media #{$media-phone} {
+    max-width: 70%;
+  }
+
+  &.fullWidth {
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+
+    &OnPhone {
+      @media #{$media-phone} {
+        width: 100%;
+        max-width: 100%;
+        background-color: transparent;
+      }
+    }
+  }
+}

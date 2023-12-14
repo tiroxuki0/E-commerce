@@ -1,0 +1,25 @@
+@import "variables";
+
+#productRating {
+    padding: 0 6px 0 0 !important;
+
+    svg {
+        @include display-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        min-width: 12px;
+    }
+}
+
+div[id*='reviewRating'] {
+    padding: 0 !important;
+
+    svg {
+        @include display-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        min-width: 12px;
+    }
+}
