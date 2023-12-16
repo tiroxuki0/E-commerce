@@ -4,7 +4,7 @@ import PriceOption from "./price-option"
 import CardOption from "./card-option"
 import { MdFileUpload } from "react-icons/md"
 import { CARD_OPTIONS } from "constants/base.constant"
-import DataTable, { TableColumn, Selector } from "react-data-table-component"
+import DataTable, { TableColumn } from "react-data-table-component"
 
 type DataRow = {
   id: number
@@ -180,7 +180,7 @@ const SendCard = () => {
               }`}
               onClick={() => setSelectedCard(item.value)}
             >
-              <div className={`NNgDN  text-sm font-semibold font-['SVN-Gilroy'] leading-none ${item.value === selectedCard ? "text-white" : "text-green-800"}`}>{item.label}</div>
+              <div className={`NNgDN  text-sm font-semibold leading-none ${item.value === selectedCard ? "text-white" : "text-green-800"}`}>{item.label}</div>
             </div>
           )
         })}
