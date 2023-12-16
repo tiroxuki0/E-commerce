@@ -27,7 +27,7 @@ const Home = (props: HomeProps) => {
     <>
       <BannerTop isMobile={isMobile} />
       <Introduction />
-      <SendCard />
+      {/* <SendCard /> */}
       <ListCard />
     </>
   )
