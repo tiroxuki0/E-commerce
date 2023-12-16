@@ -171,9 +171,10 @@ const SendCard = () => {
       </div>
 
       <div className="my-5 List w-full h-auto justify-center items-start gap-2 inline-flex flex-wrap">
-        {CARD_OPTIONS.map((item: any) => {
+        {CARD_OPTIONS.map((item: any, index: number) => {
           return (
             <div
+              key={index}
               className={`Frame1337 px-[34px] py-[9px] rounded-[10px] border border-green-800 justify-start items-start gap-2.5 flex cursor-pointer ${
                 item.value === selectedCard ? "bg-green-800" : "bg-transparent"
               }`}
