@@ -109,7 +109,7 @@ const ListCard = () => {
               className="Group1000000803 w-full flex items-center justify-center gap-[40px] overflow-x-auto overflow-y-hidden cards-slide"
               modules={[Navigation, EffectCoverflow, Pagination, A11y, Autoplay]}
               loop={true}
-              speed={400}
+              speed={800}
               navigation={true}
               spaceBetween={0}
               slidesPerView={"auto"}
@@ -124,7 +124,7 @@ const ListCard = () => {
                 slideShadows: false
               }}
               autoplay={{
-                delay: 3500,
+                delay: 1000,
                 disableOnInteraction: false
               }}
               breakpoints={{
