@@ -4,7 +4,6 @@ import { ThemeProvider } from "next-themes"
 import Header from "./header"
 import Footer from "./footer"
 import BottomNavigationBar from "./bottom-navigation-bar"
-import Navigation from "./navigation"
 import RegisterMail from "./register-mail"
 import { ToastContainer } from "react-toastify"
 import { Toaster } from "react-hot-toast"
@@ -26,10 +25,8 @@ const Layout: React.FC<{ children?: React.ReactNode, isDetailScreen: boolean }> 
           <NextNProgress color="#346448" height={6} />
           {!isSocialPage ? (
               <>
-                <Navigation />
                 <Header isDetailScreen={isDetailScreen}/>
                 <main className="flex-grow">{children}</main>
-                <RegisterMail />
                 <Footer />
                 {
                     !isDetailScreen && <BottomNavigationBar />

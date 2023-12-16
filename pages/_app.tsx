@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css"
 
 import "react-toastify/dist/ReactToastify.css"
 
-import "../styles/globals.css"
+import "../styles/globals.scss"
 import '../styles/slide.scss'
 import '../styles/pages.css'
 import '../styles/rating.scss'

@@ -6,7 +6,6 @@ import {useSideNavBar} from "stores/side-nav-bar"
 import {MENUS} from "constants/menu.constant"
 import {DEFAULT_EMAIL, DEFAULT_LANGUAGE, DEFAULT_PHONE_NUMBER} from "constants/base.constant"
 import {useLanguage} from "hooks/useLanguage"
-import {ADDRESS_LIST} from "constants/footer.constant"
 
 const SideNavContent = () => {
   const [, actionSideNavBar] = useSideNavBar()
@@ -30,13 +29,7 @@ const SideNavContent = () => {
             )
           })
         }
-        <div
-          className="cursor-pointer flex items-center justify-between py-3 text-black bg-item rounded-[5px] px-[19px] my-[7.5px]"
-          onClick={() => setOpenDropDown((prevState) => !prevState)}
-        >
-          <h3 className="ltr:mr-3 rtl:ml-3 text-md grow">{t.collaborators}</h3>
-          <ArrowDirection style={{ fontSize: "1.5rem" }} />
-        </div>
+        
         <Transition mountOnEnter unmountOnExit in={openDropdown} timeout={300} nodeRef={nodeRef}>
           {(state) => (
             <>
@@ -58,10 +51,7 @@ const SideNavContent = () => {
             </>
           )}
         </Transition>
-        {/*  */}
-        <hr className="mt-6 mb-4 border-gray-200" />
-        {/*  */}
-        <div className="mt-2 md:mt-0 max-w-[350px] w-full">
+        <div className="mt-2 md:mt-0 max-w-[350px] w-full px-5">
           <h2 className="text-[18px] font-semibold pb-2 inline-block max-w-max">{t.contactInformation}</h2>
           <div className="flex flex-col">
             <Link href={`mailto:${DEFAULT_EMAIL}`}>
@@ -74,28 +64,9 @@ const SideNavContent = () => {
                 <span className="font-bold">{t.phoneNumber}:</span> {DEFAULT_PHONE_NUMBER}
               </a>
             </Link>
-            {
-              ADDRESS_LIST.length > 0 &&
-              ADDRESS_LIST.map((address, index) => {
-                return (
-                    <a className="text-[14px] text-justify text-black py-2" key={index}>
-                      <span className="font-bold">{t.address} {index + 1}:</span> {locale === "en" ? address.titleEn : address.titleVi}
-                    </a>
-                )
-              })
-            }
           </div>
         </div>
-        {/*  */}
-        <hr className="mt-6 mb-4 border-gray-200" />
-        <div className="py-1 flex items-center justify-start h-[40px] gap-4">
-          <a href="https://cafedx.com/" target="_blank" rel="noopener noreferrer">
-            <img src="/images/icons/shopee-icon.svg" alt="/images/icons/shopee-icon.svg" className="cursor-pointer w-[40px] h-[40px]" />
-          </a>
-          <a href="https://cafedx.com/" target="_blank" rel="noopener noreferrer">
-            <img src="/images/icons/lazada-icon.svg" alt="/images/icons/lazada-icon.svg" className="cursor-pointer w-[24px] h-[24px]" />
-          </a>
-          <div className="w-[1px] h-full bg-[#346448]"></div>
+        <div className="py-3 px-2 flex items-center justify-start h-[40px] gap-4">
           <a href="https://cafedx.com/" target="_blank" rel="noopener noreferrer">
             <img src="/images/icons/facebook-icon.svg" alt="/images/icons/facebook-icon.svg" className="cursor-pointer w-[24px] h-[24px]" />
           </a>

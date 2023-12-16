@@ -32,13 +32,13 @@ const Language = () => {
       </div>
 
       <div className="hidden md:flex items-center cursor-pointer" onClick={() => setOpenLang((prevState) => !prevState)}>
-        <p className="mx-[0.3rem] text-[13px] font-bold font-english text-white">{locale === "en" ? "En" : "Vi"}</p>
-        <MdLanguage style={{ fontSize: "1.1rem", color: "white" }} />
+        <p className="mx-[0.3rem] text-[13px] font-bold font-english text-[#346448]">{locale === "en" ? "En" : "Vi"}</p>
+        <MdLanguage style={{ fontSize: "24px", color: "#346448" }} />
       </div>
       {openLang ? (
         <>
           <div className="fixed inset-0 -z-1" onClick={() => setOpenLang(false)}></div>
-          <div className={`absolute top-6 ltr:right-0 rtl:left-0 bg-palette-card py-3 px-6 shadow-md rounded-md`}>
+          <div className={`absolute top-6 ltr:right-0 rtl:left-0 bg-white py-3 px-6 shadow-md rounded-md`}>
             <LanguageItem language="vi" onCloseBox={onCloseLangBox} />
             <LanguageItem language="en" onCloseBox={onCloseLangBox} />
           </div>

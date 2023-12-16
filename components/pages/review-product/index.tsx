@@ -11,7 +11,7 @@ import {useProductReview} from "stores/product-review"
 import {replaceUrlImage} from "helpers/base.helper"
 import {DEFAULT_LANGUAGE, LANGUAGE, LIMIT_IMAGE, LIMIT_VIDEO} from "constants/base.constant"
 import {PRODUCT_FLAVORS, PRODUCT_TYPES} from "constants/product.constant"
-import Loading from "components/common/loading"
+import Loading from "components/common/loading-new"
 import {useRouter} from "next/router"
 
 const styleInput = 'box-border bg-white placeholder:text-gray text-[14px] font-[500] lg:py-[15px] py-[10px] lg:px-[22px] px-[14px] w-full rounded-[10px] border border-black'

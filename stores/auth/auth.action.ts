@@ -11,16 +11,24 @@ import { signOut } from "next-auth/react"
 type Actions = BaseAction<State>
 
 export const showModalAuth =
-  (type: "login" | "register") =>
+  (type: "login" | "register" | "close") =>
   async ({ setState, getState }: Actions) => {
     if (type === "login") {
       setState({
         ...getState(),
+        isRegister: false,
         isModalLogin: !getState().isModalLogin
+      })
+    } else if (type === "close") {
+      setState({
+        ...getState(),
+        isRegister: false,
+        isModalLogin: false
       })
     } else {
       setState({
         ...getState(),
+        isRegister: true,
         isModalLogin: !getState().isModalLogin
       })
     }
