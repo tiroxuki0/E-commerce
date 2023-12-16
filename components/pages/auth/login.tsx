@@ -40,7 +40,7 @@ const Login = (props: { setLoginForm: any; handleCloseModal(): void }) => {
     const result = await actionAuth.loginAsync({ username: email, password }, t)
     setLoading(false)
     setCheckDisabled(false)
-
+    console.log(result)
     try {
       if (result?.status) {
         reset()
