@@ -1,8 +1,0 @@
-{
-  "env": {
-    "BRANCH": "develop"
-  },
-  "scripts": {
-    "vercel-deploy": "if [ \"$BRANCH\" != \"develop\" ]; then echo \"Cannot deploy from $BRANCH branch\"; exit 1; fi"
-  }
-}
