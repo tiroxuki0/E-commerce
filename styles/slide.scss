@@ -1,277 +1,293 @@
 @import "variables";
 
+.cards-slide {
+  .swiper {
+    &-slide {
+      padding: 15px !important;
+      .card-item {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 12px;
+      }
+    }
+    .swiper-pagination-bullet {
+      background: #346448d6 !important;
+    }
+  }
+}
 /*slide in banner top*/
 .banner-top {
-    .swiper {
-        &-slide {
-            width: 100%;
-            height: 0;
-            cursor: pointer;
-            padding-top: 28.28125%;
-            @media #{$media-ipad} {
-                padding-top: 46.1538461538%;
-            }
-        }
-
-        &-pagination-bullet {
-            background-color: #FFFFFF;
-            margin: 0 3px !important;
-            width: 10px !important;
-            min-width: 10px !important;
-            height: 10px !important;
-            opacity: 1;
-
-            &-active {
-                background-color: var(--color-primary);
-            }
-
-            &s {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                bottom: 24px !important;
-                @media #{$media-ipad} {
-                    bottom: 15px !important;
-                }
-            }
-        }
+  .swiper {
+    &-slide {
+      width: 100%;
+      height: 0;
+      cursor: pointer;
+      padding-top: 28.28125%;
+      @media #{$media-ipad} {
+        padding-top: 46.1538461538%;
+      }
     }
+
+    &-pagination-bullet {
+      background-color: #ffffff;
+      margin: 0 3px !important;
+      width: 10px !important;
+      min-width: 10px !important;
+      height: 10px !important;
+      opacity: 1;
+
+      &-active {
+        background-color: var(--color-primary);
+      }
+
+      &s {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 24px !important;
+        @media #{$media-ipad} {
+          bottom: 15px !important;
+        }
+      }
+    }
+  }
 }
 
 /*slide in featured product of home page*/
 .featured-products {
-    .product-image {
-        padding-top: 140%;
-        height: 0;
-        position: relative;
+  .product-image {
+    padding-top: 140%;
+    height: 0;
+    position: relative;
+  }
+
+  .swiper {
+    padding: 0 37px;
+    @media #{$media-ipad} {
+      padding: 0 20px;
+      display: flex;
+      justify-content: center;
     }
 
-    .swiper {
-        padding: 0 37px;
+    &-slide {
+      @media #{$media-ipad} {
+        width: 174px !important;
+        min-width: 174px;
+      }
+
+      &:last-child {
         @media #{$media-ipad} {
-            padding: 0 20px;
-            display: flex;
-            justify-content: center;
+          margin-right: 0 !important;
         }
-
-        &-slide {
-            @media #{$media-ipad} {
-                width: 174px !important;
-                min-width: 174px;
-            }
-
-            &:last-child {
-                @media #{$media-ipad} {
-                    margin-right: 0 !important;
-                }
-            }
-        }
+      }
     }
+  }
 }
 
 /*slide in social of home page*/
 .social-slide-container {
-    @media #{$media-ipad} {
-        background-color: var(--color-white);
-        border-top-right-radius: 5px;
-        border-top-left-radius: 5px;
+  @media #{$media-ipad} {
+    background-color: var(--color-white);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  .swiper {
+    &-wrapper {
+      align-items: center;
     }
 
-    .swiper {
-        &-wrapper {
-            align-items: center;
-        }
-
-        &-button-prev, &-button-next {
-            display: none;
-        }
-
-        &-button-next {
-            right: 13px;
-        }
-
-        &-button-prev {
-            left: 13px;
-        }
-
-        &-button-prev:after, &-button-next:after {
-            color: var(--color-white);
-            font-weight: 800;
-            font-size: 30px;
-        }
-
-        &-button-prev1, &-button-next1 {
-            width: 53px;
-            height: 53px;
-            min-width: 53px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            @media #{$media-ipad} {
-                display: none;
-            }
-        }
-
-        &-slide {
-            width: 16.5625vw !important;
-
-            &-active {
-                width: 47.2395833333vw !important;
-
-                .social-item {
-                    padding: 25px !important;
-
-                    &-image {
-                        width: 44.5424476295% !important;
-                        min-width: 44.5424476295% !important;
-
-                        & > div {
-                            border-radius: 18px;
-                        }
-                    }
-
-                    &-info {
-                        display: block !important;
-                    }
-                }
-            }
-        }
+    &-button-prev,
+    &-button-next {
+      display: none;
     }
+
+    &-button-next {
+      right: 13px;
+    }
+
+    &-button-prev {
+      left: 13px;
+    }
+
+    &-button-prev:after,
+    &-button-next:after {
+      color: var(--color-white);
+      font-weight: 800;
+      font-size: 30px;
+    }
+
+    &-button-prev1,
+    &-button-next1 {
+      width: 53px;
+      height: 53px;
+      min-width: 53px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media #{$media-ipad} {
+        display: none;
+      }
+    }
+
+    &-slide {
+      width: 16.5625vw !important;
+
+      &-active {
+        width: 47.2395833333vw !important;
+
+        .social-item {
+          padding: 25px !important;
+
+          &-image {
+            width: 44.5424476295% !important;
+            min-width: 44.5424476295% !important;
+
+            & > div {
+              border-radius: 18px;
+            }
+          }
+
+          &-info {
+            display: block !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 /*slide in product detail*/
 .variant-media-swiper {
-    &__big {
-        .swiper {
-            width: 100%;
+  &__big {
+    .swiper {
+      width: 100%;
 
-            &-pagination-bullet {
-                background: var(--color-white);
-                opacity: 1;
-                width: 7px;
-                height: 7px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-                margin: 0 3px !important;
+      &-pagination-bullet {
+        background: var(--color-white);
+        opacity: 1;
+        width: 7px;
+        height: 7px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        margin: 0 3px !important;
 
-                &s {
-                    @include display-flex-important;
-                    justify-content: center;
-                    bottom: 24px !important;
-                }
-
-                &-active {
-                    background: var(--color-primary);
-                }
-            }
-
-            &-slide > div {
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-                border-radius: 8px;
-                overflow: hidden;
-            }
+        &s {
+          @include display-flex-important;
+          justify-content: center;
+          bottom: 24px !important;
         }
+
+        &-active {
+          background: var(--color-primary);
+        }
+      }
+
+      &-slide > div {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        overflow: hidden;
+      }
     }
+  }
 
-    &__small {
-        margin-top: 10px;
-        @media #{$media-ipad} {
-            margin-top: 7px;
-        }
-
-        .swiper {
-            height: 100%;
-            width: 100%;
-
-            &-slide {
-                position: relative;
-                transition: 0.3s;
-                height: fit-content !important;
-                width: 105px !important;
-                min-width: 105px;
-                max-width: 105px;
-                @media #{$media-ipad} {
-                    width: 66px !important;
-                    min-width: 66px;
-                    max-width: 66px;
-                }
-
-                & > div {
-                    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
-                    border: 1px solid var(--color-white);
-                    overflow: hidden;
-                    border-radius: 4px;
-                    opacity: 0.4;
-                }
-
-                &-thumb-active {
-                    transition: 0.3s;
-
-                    & > div {
-                        border-color: var(--color-primary);
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.media-swiper {
-    height: calc(100% - 42px);
-
-    &-item {
-        width: auto !important;
-        height: 100% !important;
-        max-height: 100% !important;
-        min-width: 1px !important;
-        min-height: 1px !important;
-        object-fit: contain;
+  &__small {
+    margin-top: 10px;
+    @media #{$media-ipad} {
+      margin-top: 7px;
     }
 
     .swiper {
-        padding: 30px 0;
-        width: 100%;
-        height: 100%;
+      height: 100%;
+      width: 100%;
+
+      &-slide {
+        position: relative;
+        transition: 0.3s;
+        height: fit-content !important;
+        width: 105px !important;
+        min-width: 105px;
+        max-width: 105px;
         @media #{$media-ipad} {
-            padding: 0 0 51px;
+          width: 66px !important;
+          min-width: 66px;
+          max-width: 66px;
         }
 
-        &-wrapper {
-            height: 100%;
+        & > div {
+          box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
+          border: 1px solid var(--color-white);
+          overflow: hidden;
+          border-radius: 4px;
+          opacity: 0.4;
         }
 
-        &-pagination {
-            @include display-flex;
-            align-items: center;
-            justify-content: center;
-            bottom: 12.5px !important;
-            @media #{$media-ipad} {
-                bottom: 22px !important;
-            }
+        &-thumb-active {
+          transition: 0.3s;
 
-            &-bullet {
-                width: 5px;
-                height: 5px;
-                background: var(--color-white);
-                margin: 0 12px !important;
-                @media #{$media-ipad} {
-                    width: 7px;
-                    height: 7px;
-                }
-            }
+          & > div {
+            border-color: var(--color-primary);
+            opacity: 1;
+          }
         }
-
-        &-slide {
-            & > div > span {
-                height: 100% !important;
-                width: 100% !important;
-            }
-        }
+      }
     }
+  }
+}
+
+.media-swiper {
+  height: calc(100% - 42px);
+
+  &-item {
+    width: auto !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    min-width: 1px !important;
+    min-height: 1px !important;
+    object-fit: contain;
+  }
+
+  .swiper {
+    padding: 30px 0;
+    width: 100%;
+    height: 100%;
+    @media #{$media-ipad} {
+      padding: 0 0 51px;
+    }
+
+    &-wrapper {
+      height: 100%;
+    }
+
+    &-pagination {
+      @include display-flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 12.5px !important;
+      @media #{$media-ipad} {
+        bottom: 22px !important;
+      }
+
+      &-bullet {
+        width: 5px;
+        height: 5px;
+        background: var(--color-white);
+        margin: 0 12px !important;
+        @media #{$media-ipad} {
+          width: 7px;
+          height: 7px;
+        }
+      }
+    }
+
+    &-slide {
+      & > div > span {
+        height: 100% !important;
+        width: 100% !important;
+      }
+    }
+  }
 }
 
 #mediaFullScreen {
-    .swiper-button-disabled {
-        display: none;
-    }
+  .swiper-button-disabled {
+    display: none;
+  }
 }
