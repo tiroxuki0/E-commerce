@@ -1,8 +1,8 @@
 import Link from "next/link"
 import React from "react"
 import { useLanguage } from "hooks/useLanguage"
-import {ADDRESS_LIST, FOOTER_COLUMNS} from "constants/footer.constant"
-import {DEFAULT_EMAIL, DEFAULT_LANGUAGE, DEFAULT_PHONE_NUMBER} from "constants/base.constant"
+import { FOOTER_COLUMNS } from "constants/footer.constant"
+import { DEFAULT_EMAIL, DEFAULT_LANGUAGE, DEFAULT_PHONE_NUMBER } from "constants/base.constant"
 
 const FooterColumns = () => {
   const { t, locale } = useLanguage()
@@ -27,12 +27,12 @@ const FooterColumns = () => {
       <div className="mt-6 md:mt-0 max-w-[350px] w-full">
         <h2 className="text-[18px] border-b-2 text-primary font-semibold border-[#BCBCBC] pb-4 inline-block max-w-max">{t.contactInformation}</h2>
         <div className="flex flex-col mt-2">
-            <a href={`mailto:${DEFAULT_EMAIL}`} className="text-[14px] text-justify text-primary py-2 hover:underline">
-              <span className="font-bold">Email:</span> {DEFAULT_EMAIL}
-            </a>
-            <a href={`tel:${DEFAULT_PHONE_NUMBER}`} className="text-[14px] text-justify text-primary py-2 hover:underline">
-              <span className="font-bold">{t.phoneNumber}:</span> {DEFAULT_PHONE_NUMBER}
-            </a>
+          <a href={`mailto:${DEFAULT_EMAIL}`} className="text-[14px] text-justify text-primary py-2 hover:underline">
+            <span className="font-bold">Email:</span> {DEFAULT_EMAIL}
+          </a>
+          <a href={`tel:${DEFAULT_PHONE_NUMBER}`} className="text-[14px] text-justify text-primary py-2 hover:underline">
+            <span className="font-bold">{t.phoneNumber}:</span> {DEFAULT_PHONE_NUMBER}
+          </a>
         </div>
       </div>
     </div>
