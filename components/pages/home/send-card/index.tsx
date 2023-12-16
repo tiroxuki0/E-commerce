@@ -4,7 +4,21 @@ import PriceOption from "./price-option"
 import CardOption from "./card-option"
 import { MdFileUpload } from "react-icons/md"
 import { CARD_OPTIONS } from "constants/base.constant"
-import DataTable from "react-data-table-component"
+import DataTable, { TableColumn, Selector } from "react-data-table-component"
+
+type DataRow = {
+  id: number
+  className: string
+  title: string
+  10000: number
+  20000: number
+  30000: number
+  50000: number
+  100000: number
+  200000: number
+  300000: number
+  500000: number
+}
 
 const data = [
   {
@@ -35,43 +49,43 @@ const data = [
   }
 ]
 
-const columns = [
+const columns: TableColumn<DataRow>[] = [
   {
     name: <div className="font-bold">{"Nhóm"}</div>,
     width: "200px",
-    selector: (row: any) => <div className={"font-bold" + " " + row.className}>{row.title}</div>
+    cell: (row: any) => <div className={"font-bold" + " " + row.className}>{row.title}</div>
   },
   {
     name: <div className="font-bold">{"10.000đ"}</div>,
-    selector: (row: any) => <div className={row.className}>{row["10000"] + "%"}</div>
+    cell: (row: any) => <div className={row.className}>{row["10000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"20.000đ"}</div>,
-    selector: (row: any) => <div className={row.className}>{row["20000"] + "%"}</div>
+    cell: (row: any) => <div className={row.className}>{row["20000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"30.000đ"}</div>,
-    selector: (row: any) => <div className={row.className}>{row["30000"] + "%"}</div>
+    cell: (row: any) => <div className={row.className}>{row["30000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"50.000đ"}</div>,
-    selector: (row: any) => <div className={row.className}>{row["50000"] + "%"}</div>
+    cell: (row: any) => <div className={row.className}>{row["50000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"100.000đ"}</div>,
-    selector: (row: any) => <div className={row.className}>{row["100000"] + "%"}</div>
+    cell: (row: any) => <div className={row.className}>{row["100000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"200.000đ"}</div>,
-    selector: (row: any) => <div className={row.className}>{row["200000"] + "%"}</div>
+    cell: (row: any) => <div className={row.className}>{row["200000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"300.000đ"}</div>,
-    selector: (row: any) => <div className={row.className}>{row["300000"] + "%"}</div>
+    cell: (row: any) => <div className={row.className}>{row["300000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"500.000đ"}</div>,
-    selector: (row: any) => <div className={row.className}>{row["500000"] + "%"}</div>
+    cell: (row: any) => <div className={row.className}>{row["500000"] + "%"}</div>
   }
 ]
 
