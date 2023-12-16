@@ -4,88 +4,85 @@ import PriceOption from "./price-option"
 import CardOption from "./card-option"
 import { MdFileUpload } from "react-icons/md"
 import { CARD_OPTIONS } from "constants/base.constant"
-import DataTable, { TableColumn } from "react-data-table-component"
+import DataGrid from "react-data-grid"
 
-type DataRow = {
-  id: number
-  className: string
-  title: string
-  10000: number
-  20000: number
-  30000: number
-  50000: number
-  100000: number
-  200000: number
-  300000: number
-  500000: number
-}
+import "react-data-grid/lib/styles.css"
 
-const data = [
+const rows = [
   {
     id: 1,
     className: "text-green-500 font-bold",
     title: "Không bảo hiểm",
-    10000: 16,
-    20000: 16,
-    30000: 16,
-    50000: 12.5,
-    100000: 12.5,
-    200000: 14,
-    300000: 14,
-    500000: 14
+    10000: 16 + "%",
+    20000: 16 + "%",
+    30000: 16 + "%",
+    50000: 12.5 + "%",
+    100000: 12.5 + "%",
+    200000: 14 + "%",
+    300000: 14 + "%",
+    500000: 14 + "%"
   },
   {
     id: 2,
     className: "text-black",
     title: "Bảo hiểm",
-    10000: 16.5,
-    20000: 16.5,
-    30000: 16.5,
-    50000: 13,
-    100000: 13,
-    200000: 14.5,
-    300000: 14.5,
-    500000: 14.5
+    10000: 16.5 + "%",
+    20000: 16.5 + "%",
+    30000: 16.5 + "%",
+    50000: 13 + "%",
+    100000: 13 + "%",
+    200000: 14.5 + "%",
+    300000: 14.5 + "%",
+    500000: 14.5 + "%"
   }
 ]
 
-const columns: TableColumn<DataRow>[] = [
+const columns = [
   {
     name: <div className="font-bold">{"Nhóm"}</div>,
     width: "200px",
-    cell: (row: any) => <div className={"font-bold" + " " + row.className}>{row.title}</div>
+    key: "title"
+    // cell: (row: any) => <div className={"font-bold" + " " + row?.className}>{row?.title}</div>
   },
   {
     name: <div className="font-bold">{"10.000đ"}</div>,
-    cell: (row: any) => <div className={row.className}>{row["10000"] + "%"}</div>
+    key: "10000"
+    // cell: (row: any) => <div className={row.className}>{row["10000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"20.000đ"}</div>,
-    cell: (row: any) => <div className={row.className}>{row["20000"] + "%"}</div>
+    key: "20000"
+    // cell: (row: any) => <div className={row.className}>{row["20000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"30.000đ"}</div>,
-    cell: (row: any) => <div className={row.className}>{row["30000"] + "%"}</div>
+    key: "30000"
+    // cell: (row: any) => <div className={row.className}>{row["30000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"50.000đ"}</div>,
-    cell: (row: any) => <div className={row.className}>{row["50000"] + "%"}</div>
+    key: "50000"
+    // cell: (row: any) => <div className={row.className}>{row["50000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"100.000đ"}</div>,
-    cell: (row: any) => <div className={row.className}>{row["100000"] + "%"}</div>
+    key: "100000"
+    // cell: (row: any) => <div className={row.className}>{row["100000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"200.000đ"}</div>,
-    cell: (row: any) => <div className={row.className}>{row["200000"] + "%"}</div>
+    key: "200000"
+    // cell: (row: any) => <div className={row.className}>{row["200000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"300.000đ"}</div>,
-    cell: (row: any) => <div className={row.className}>{row["300000"] + "%"}</div>
+    key: "300000"
+    // cell: (row: any) => <div className={row.className}>{row["300000"] + "%"}</div>
   },
   {
     name: <div className="font-bold">{"500.000đ"}</div>,
-    cell: (row: any) => <div className={row.className}>{row["500000"] + "%"}</div>
+    key: "500000"
+    // cell: (row: any) => <div className={row.className}>{row["500000"] + "%"}</div>
   }
 ]
 
@@ -185,7 +182,7 @@ const SendCard = () => {
           )
         })}
       </div>
-      <DataTable className="overflow-x-hidden" columns={columns} data={data} />
+      <DataGrid className="h-auto"  columns={columns} rows={rows} />
     </div>
   )
 }
