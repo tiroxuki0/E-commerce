@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form"
 import { useAuth } from "stores/auth"
 import * as yup from "yup"
 import { useLanguage } from "hooks/useLanguage"
-import Loading from "components/common/loading"
+import Loading from "components/common/loading-new"
 import Logo from "./logo"
 import { passwordPattern, fullNamePattern } from "constants/base.constant"
 

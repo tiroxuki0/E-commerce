@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form"
 import { useAuth } from "stores/auth"
 import * as yup from "yup"
 import { useLanguage } from "hooks/useLanguage"
-import Loading from "components/common/loading"
+import Loading from "components/common/loading-new"
 import Logo from "./logo"
 import { passwordPattern } from "constants/base.constant"
 import { useRouter } from "next/router"
@@ -40,7 +40,7 @@ const Login = (props: { setLoginForm: any; handleCloseModal(): void }) => {
     const result = await actionAuth.loginAsync({ username: email, password }, t)
     setLoading(false)
     setCheckDisabled(false)
-    console.log(result)
+
     try {
       if (result?.status) {
         reset()
